@@ -1,14 +1,15 @@
 spring:
   datasource:
     url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: validate
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
     enabled: true
+
   data:
     redis:
       host: redis
