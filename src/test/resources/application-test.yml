@@ -1,10 +1,7 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/test
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
+  cache:
+    type: none
 
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+    enabled: true
